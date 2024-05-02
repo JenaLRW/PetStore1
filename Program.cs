@@ -1,44 +1,55 @@
-﻿using Petstore1;
+using Petstore1;
 using System;
 
 class Program
 {
     static void Main(string[] args)
     { 
-        string userInput = string.Empty; //Pet Shop 1: STARTING THE USER INTERFACE step 1
+        string userInput = string.Empty; 
 
         Console.WriteLine("Press 1 to add a product");
 
-        Console.WriteLine("type 'exit' to quit"); //Pet Shop 1: step 2
+        Console.WriteLine("type 'exit' to quit"); 
 
-        userInput = Console.ReadLine(); // step 3
+        userInput = Console.ReadLine();
 
-        // LOOPING INSTRUCTIONS for the while code
-        while (userInput.ToLower() != "exit") // Handling uppercase instructions for the .ToLower code, congrats! that was the last step for #1 pet shop assignment!
-            { 
+        while (userInput.ToLower() != "exit")  
+            {        
 
-            var dogleash = new DogLeash();// step 4
+            Console.WriteLine("Enter Product Name");
 
-            Console.WriteLine("Enter Product Name");// step 5
+            userInput = Console.ReadLine(); 
 
-            dogleash.Name = Console.ReadLine();
+            if (userInput == "dog leash") // using IF statements to expect 2 different answers
+            {
+                var dogleash = new DogLeash();
 
-            Console.WriteLine("Enter length"); // ENTERING MORE PROPERTIES Step 1
+                dogleash.Name = Console.ReadLine();
 
-            dogleash.LengthInches = int.Parse(Console.ReadLine());
+                Console.WriteLine("Enter length"); 
 
+                dogleash.LengthInches = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Enter what material product is made of");
+                Console.WriteLine("Enter what material product is made of");
 
-            dogleash.Material = Console.ReadLine();
+                dogleash.Material = Console.ReadLine();
+            }
 
-            Console.WriteLine("Press 1 to add a product");
+            if (userInput == "cat food")
+            {
+                var catfood = new CatFood();
 
-            Console.WriteLine("type 'exit' to quit"); //Pet Shop 1: step 2
+                catfood.Name = Console.ReadLine();
 
-            userInput = Console.ReadLine(); // step 3
+                Console.WriteLine("Enter weight in pounds"); 
 
-            // need to do the same for CatFood
+                catfood.WeightPounds = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("Is this kitten food? T or F");
+
+                catfood.IsKittenFood = bool.Parse(Console.ReadLine());
+
+            }
 
         }
 
