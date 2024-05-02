@@ -43,7 +43,7 @@ class Program
 
                 Console.WriteLine("Enter weight in pounds"); 
 
-                catfood.WeightPounds = int.Parse(Console.ReadLine());
+                catfood.WeightPounds = double.Parse(Console.ReadLine());
 
                 Console.WriteLine("Is this kitten food? T or F");
 
