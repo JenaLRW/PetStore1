@@ -45,7 +45,7 @@ class Program
 
                 catfood.WeightPounds = double.Parse(Console.ReadLine());
 
-                Console.WriteLine("Is this kitten food? T or F");
+                Console.WriteLine("Is this kitten food? true or false");
 
                 catfood.IsKittenFood = bool.Parse(Console.ReadLine());
 
